@@ -1,0 +1,22 @@
+#imagenFondo{
+    position: absolute;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    flex-flow: row;
+  
+}
+
+#textoFormulario{
+    align-items: flex-start;
+    display: flex;
+    position: center;
+    margin: 0 auto;
+    margin-top: 30;
+    display: inline;
+    flex-direction: row;
+}
