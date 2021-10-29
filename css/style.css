@@ -1,3 +1,4 @@
+/*estilos de imagen de fonto y de formulario*/
 #imagenFondo{
     position: absolute;
     background-size: cover;
@@ -24,3 +25,5 @@
     z-index: 4;
     color: white;
 }
+
+
