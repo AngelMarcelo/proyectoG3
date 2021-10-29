@@ -31,10 +31,10 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <!-- Aqui tendriamos que poner el logo de la pagina o el nombre -->
-          <a class="navbar-brand ms-5" href="index.html">
+          <a class="logoNav ms-5" href="index.html">
             <i class="fas fa-car text-white fs-1"></i>
           </a>
-          <div class="collapse navbar-collapse ms-5" id="navBar">
+          <div class="collapse navbar-collapse" id="navBar">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item mx-3">
                 <a class="nav-link"  href="index.html"
@@ -60,60 +60,75 @@
         width="100%"
         />
       </div>
-        <section class="p-2 m-5 row" id="">
+        <section class="p-2 m-5">
           <h1 class="text-center text-warning">Gestor de Productos</h1>
-          <form>
-            <div class="form-group transparent-input">
+          <form id="formulario">
+            <div class="form-group transparent-input mb-3">
               <label for="">Marca</label>
               <input
-                type="marca"
+                type="text"
                 class="form-control"
                 id="marca"
                 aria-describedby="marcaAuto"
                 placeholder="marca"
+                maxlength="20"
               />
+              <div class="invalid-feedback">Este campo es obligatorio</div>
             </div>
-            <div class="form-group">
+            <div class="form-group mb-3">
               <label for="">Modelo</label>
               <input
-                type="modelo"
+                type="text"
                 class="form-control"
                 id="modelo"
                 aria-describedby="modeloAuto"
                 placeholder="modelo"
+                maxlength="30"
               />
+              <div class="invalid-feedback">Este campo es obligatorio</div>
             </div>
-            <div class="form-group">
+            <div class="form-group mb-3">
               <label for="">Código</label>
               <input
-                type="codigo"
+                type="text"
                 class="form-control"
                 id="codigo"
                 aria-describedby="codigoAuto"
                 placeholder="código"
+                maxlength="3"
               />
+              <div class="invalid-feedback">Ingrese un codigo valido</div>
             </div>
-            <div class="form-group">
+            <div class="form-group mb-3">
               <label for="">Descripción</label>
               <input
-                type="descripción"
+                type="text"
                 class="form-control"
                 id="descripcion"
                 aria-describedby="descripcionAuto"
                 placeholder="decripcion"
+                maxlength="200"
               />
+              <div class="invalid-feedback">Campo obligatorio</div>
             </div>
 
-            <div class="form-group">
+            <div class="form-group mb-3">
               <label for="">Imagen</label>
               <input
-                type="imagen"
+                type="text"
                 class="form-control"
                 id="imagenUrl"
                 placeholder="imagen"
               />
             </div>
+            <div class="invalid-feedback">Campo obligatorio</div>
             <button type="submit" class="btn btn-primary my-3">Agregar</button>
+            <div class="alert alert-danger d-flex align-items-center " role="alert" id="alerta">
+              <i class="fas fa-exclamation-circle fa-2x ms-lg-2"></i>
+              <div>
+                An example danger alert with an icon
+              </div>
+            </div>
           </form>
         </section>
     </main>
@@ -176,6 +191,7 @@
       </section>
       <p class="text-center pt-3">&copy;Todos los derechos reservados.</p>
     </footer>
-    <script src="js/bootstrap.min.js"></script>
   </body>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="/js/validaciones.js"></script>
 </html>
