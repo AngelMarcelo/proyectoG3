@@ -24,3 +24,8 @@
 .logoNav{
     width: 30%;
 }
+
+.fondoPrueba{
+    background: url(/img/fondo\ auto\ form.png);
+    background-size: cover;
+}

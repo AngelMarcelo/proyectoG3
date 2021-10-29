@@ -37,12 +37,12 @@
           <div class="collapse navbar-collapse" id="navBar">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item mx-3">
-                <a class="nav-link"  href="index.html"
-                  >Inicio</a
-                >
+                <a class="nav-link" href="index.html">Inicio</a>
               </li>
               <li class="nav-item mx-3">
-                <a class="nav-link active" aria-current="page" href="admin.html">Admin</a>
+                <a class="nav-link active" aria-current="page" href="admin.html"
+                  >Admin</a
+                >
               </li>
               <li class="nav-item mx-3">
                 <a class="nav-link" href="acercaDe.html">Acerca de nosotros</a>
@@ -52,85 +52,87 @@
         </div>
       </nav>
     </header>
-    <main class="conteiner">
-      <div class="" id="imagenFondo textoFormulario">
-        <img
-        src="img/fondo auto form.png"
-        alt="auto fondo pantalla"
-        width="100%"
-        />
-      </div>
-        <section class="p-2 m-5">
-          <h1 class="text-center text-warning">Gestor de Productos</h1>
-          <form id="formulario">
-            <div class="form-group transparent-input mb-3">
-              <label for="">Marca</label>
-              <input
-                type="text"
-                class="form-control"
-                id="marca"
-                aria-describedby="marcaAuto"
-                placeholder="marca"
-                maxlength="20"
-              />
-              <div class="invalid-feedback">Este campo es obligatorio</div>
-            </div>
-            <div class="form-group mb-3">
-              <label for="">Modelo</label>
-              <input
-                type="text"
-                class="form-control"
-                id="modelo"
-                aria-describedby="modeloAuto"
-                placeholder="modelo"
-                maxlength="30"
-              />
-              <div class="invalid-feedback">Este campo es obligatorio</div>
-            </div>
-            <div class="form-group mb-3">
-              <label for="">Código</label>
-              <input
-                type="text"
-                class="form-control"
-                id="codigo"
-                aria-describedby="codigoAuto"
-                placeholder="código"
-                maxlength="3"
-              />
-              <div class="invalid-feedback">Ingrese un codigo valido</div>
-            </div>
-            <div class="form-group mb-3">
-              <label for="">Descripción</label>
-              <input
-                type="text"
-                class="form-control"
-                id="descripcion"
-                aria-describedby="descripcionAuto"
-                placeholder="decripcion"
-                maxlength="200"
-              />
-              <div class="invalid-feedback">Campo obligatorio</div>
-            </div>
+    <main class="fondoPrueba">
+      <section class="p-2 container">
+        <h1 class="text-center text-warning mt-5">Gestor de Productos</h1>
+        <form id="formulario">
+          <div class="form-group transparent-input mb-3">
+            <label for="" class="text-white">Marca</label>
+            <input
+              type="text"
+              class="form-control"
+              id="marca"
+              aria-describedby="marcaAuto"
+              placeholder="marca"
+              maxlength="20"
+              required
+            />
+            <div class="invalid-feedback">Este campo es obligatorio</div>
+          </div>
+          <div class="form-group mb-3">
+            <label for="" class="text-white">Modelo</label>
+            <input
+              type="text"
+              class="form-control"
+              id="modelo"
+              aria-describedby="modeloAuto"
+              placeholder="modelo"
+              maxlength="30"
+              required
+            />
+            <div class="invalid-feedback">Este campo es obligatorio</div>
+          </div>
+          <div class="form-group mb-3">
+            <label for="" class="text-white">Código</label>
+            <input
+              type="text"
+              class="form-control"
+              id="codigo"
+              aria-describedby="codigoAuto"
+              placeholder="código"
+              maxlength="3"
+              required
+            />
+            <div class="invalid-feedback">Ingrese un codigo valido</div>
+          </div>
+          <div class="form-group mb-3">
+            <label for="" class="text-white">Descripción</label>
+            <input
+              type="text"
+              class="form-control"
+              id="descripcion"
+              aria-describedby="descripcionAuto"
+              placeholder="decripcion"
+              maxlength="200"
+              required
+            />
+            <div class="invalid-feedback">Agregue una descripcion valida</div>
+          </div>
 
-            <div class="form-group mb-3">
-              <label for="">Imagen</label>
-              <input
-                type="text"
-                class="form-control"
-                id="imagenUrl"
-                placeholder="imagen"
-              />
+          <div class="form-group mb-3">
+            <label for=""class="text-white">Imagen</label>
+            <input
+              type="text"
+              class="form-control"
+              id="imagenUrl"
+              placeholder="imagen"
+              required
+            />
+          </div>
+          <div class="invalid-feedback">Campo obligatorio</div>
+          <button type="submit" class="btn btn-primary my-3">Agregar</button>
+          <div
+            class="alert alert-danger d-flex align-items-center d-none"
+            role="alert"
+            id="alerta"
+          >
+            <i class="fas fa-exclamation-circle fa-2x ms-lg-2"></i>
+            <div>
+              Por favor complete todos los campos del formulario para continuar
             </div>
-            <div class="invalid-feedback">Campo obligatorio</div>
-            <button type="submit" class="btn btn-primary my-3">Agregar</button>
-            <div class="alert alert-danger d-flex align-items-center d-none " role="alert" id="alerta">
-              <i class="fas fa-exclamation-circle fa-2x ms-lg-2"></i>
-              <div>
-                Por favor complete todos los campos del formulario para continuar
-              </div>
-            </div>
-          </form>
-        </section>
+          </div>
+        </form>
+      </section>
     </main>
 
     <footer class="bg-dark text-secondary py-3 textCenter">

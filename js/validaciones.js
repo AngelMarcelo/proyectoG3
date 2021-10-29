@@ -2,9 +2,11 @@ let marca = document.querySelector('#marca');
 let modelo = document.querySelector('#modelo');
 let codigo = document.querySelector('#codigo');
 let descripcion = document.querySelector('#descripcion');
-let url = document.querySelector('#imagenUrl');
+let imagenUrl = document.querySelector('#imagenUrl');
 let alerta = document.querySelector('#alerta');
 let formulario = document.querySelector('#formulario');
+
+
 
 marca.addEventListener('blur', () => {
     validacionTexto(marca);
@@ -18,8 +20,8 @@ codigo.addEventListener('blur', () =>{
 descripcion.addEventListener('blur', () =>{
     validacionTexto(descripcion);
 })
-url.addEventListener('blur', () =>{
-    validacionUrlImagen(url);
+imagenUrl.addEventListener('blur', () =>{
+    validacionUrlImagen(imagenUrl);
 })
 
 
@@ -57,7 +59,7 @@ function validacionUrlImagen(input) {
   }
 
 function validacionFormulario (){
-    if (validacionTexto(marca)&&validacionTexto(modelo)&&validacionCodigo(codigo)&&validacionTexto(descripcion)&&validacionUrlImagen(url)){
+    if (validacionTexto(marca)&&validacionTexto(modelo)&&validacionCodigo(codigo)&&validacionTexto(descripcion)&&validacionUrlImagen(imagenUrl)){
         alerta.className = 'alert alert-danger d-flex align-items-center';
 
     }else{
