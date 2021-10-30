@@ -13,11 +13,11 @@ let arregloAutos= [];
 function agregarAuto(){
     // se agrega un nuevo vehiculo
     let autoNuevo = new autos (
-        marca.value;
-        modelo.value;
-        codigo.value;
-        descripcion.value;
-        imagen.value;
+        marca.value,
+        modelo.value,
+        codigo.value,
+        descripcion.value,
+        imagen.value,
  );
     console.log(autoNuevo);
     //agregar datos del auto al arreglo
