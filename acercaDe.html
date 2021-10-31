@@ -30,11 +30,9 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <!-- Aqui tendriamos que poner el logo de la pagina o el nombre -->
-          <a class="logoNav text-center" href="index.html">
-            <!-- <i class="fas fa-car text-white fs-1"></i> -->
+          <a class="logoNav" href="index.html" id="posicionLogoNav">
             <div>
-              <img src="/img/image.png" id="tamanoImg" alt="">
+              <img src="/img/image.png" id="tamanoImg" alt="" />
             </div>
           </a>
           <div class="collapse navbar-collapse" id="navBar">
@@ -52,27 +50,76 @@
                   href="acercaDe.html"
                   >Acerca de nosotros</a
                 >
-              </li>
+              </li>     
             </ul>
           </div>
+          <a
+          
+            class="nav-link text-lg-end text-decoration-none text-secondary "
+            href="/error404.html"
+            >
+            <i class="fas fa-user me-md-1"></i>
+            Ingresar</a
+          >
         </div>
       </nav>
     </header>
     <main>
       <div class="fondoAcercaDe">
-        <h1 class="display-5 text-white pe-5 pt-5 text-end">
-          Mas de 30 años <br />brindando nuestros servicios <br />
+        <h1 class="display-5" id="textoImg">
+          Mas de 40 años <br />brindando nuestros servicios <br />
           a toda la Argentina<br />
         </h1>
       </div>
+      <section class="container">
+        <h2 class="text-center pt-5">Conoce a nuestros fundadores</h2>
+        <section class="row my-4">
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="text-center my-4">
+              <img src="/img/Avatars1.jpg" width="100%" class="avatares" alt="avatar de creador">
+            </div>
+            <h3 class="text-center">Angel Martinez</h3>
+            <p class="lead text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus in, ipsam culpa quo sunt omnis provident magni perspiciatis quia officiis tempore fugiat id. Excepturi aperiam fugit at? Vero, voluptas explicabo.</p>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="text-center my-4">
+              <img src="/img/Avatars2.jpg" width="100%" class="avatares" alt="avatar de creador">
+            </div>
+            <h3 class="text-center">Gabriel Gomez</h3>
+            <p class="lead text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus in, ipsam culpa quo sunt omnis provident magni perspiciatis quia officiis tempore fugiat id. Excepturi aperiam fugit at? Vero, voluptas explicabo.</p>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="text-center my-4">
+              <img src="/img/Avatars3.jpg" width="100%" class="avatares" alt="avatar de creador">
+            </div>
+            <h3 class="text-center">Benjamin Padros</h3>
+            <p class="lead text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus in, ipsam culpa quo sunt omnis provident magni perspiciatis quia officiis tempore fugiat id. Excepturi aperiam fugit at? Vero, voluptas explicabo.</p>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="text-center my-4">
+              <img src="/img/Avatars4.jpg" width="100%" class="avatares" alt="avatar de creador">
+            </div>
+            <h3 class="text-center">Fermin Aguilar</h3>
+            <p class="lead text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus in, ipsam culpa quo sunt omnis provident magni perspiciatis quia officiis tempore fugiat id. Excepturi aperiam fugit at? Vero, voluptas explicabo.</p>
+          </div>
+        </section>
+      </section>
+      <section class="text-center py-4 bg-dark">
+        <h2 class="text-white fs-1">Nuesta historia</h2>
+        <p class="lead text-white container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt culpa nobis excepturi aliquid soluta expedita esse dolores consequatur saepe alias sit asperiores ad quod quisquam explicabo natus ea voluptate ab in tenetur, quidem, debitis eos sapiente. Explicabo ab soluta culpa sit eaque corrupti dicta, quas sequi delectus veniam! Assumenda, consequatur! Hic ut consequatur aspernatur vel quos tempora officia quas! Voluptas molestias quasi ipsum consequatur aliquam numquam culpa tempora natus veniam, incidunt tempore quas soluta voluptatum repellendus molestiae eos possimus est suscipit necessitatibus perspiciatis. Animi et, dolorum quis adipisci consequuntur voluptas hic sed, doloribus velit eligendi nobis. Culpa possimus omnis excepturi</p>
+      </section>
+      <section class="py-4 text-center">
+        <h2 class="text-dark fs-1">¿Porque autos?</h2>
+        <p class="lead text-dark container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt culpa nobis excepturi aliquid soluta expedita esse dolores consequatur saepe alias sit asperiores ad quod quisquam explicabo natus ea voluptate ab in tenetur, quidem, debitis eos sapiente. Explicabo ab soluta culpa sit eaque corrupti dicta, quas sequi delectus veniam! Assumenda, consequatur! Hic ut consequatur aspernatur vel quos tempora officia quas! Voluptas molestias quasi ipsum consequatur aliquam numquam culpa tempora natus veniam, incidunt tempore quas soluta voluptatum repellendus molestiae eos possimus est suscipit necessitatibus perspiciatis. Animi et, dolorum quis adipisci consequuntur voluptas hic sed, doloribus velit eligendi nobis. Culpa possimus omnis excepturi</p>
+      </section>
     </main>
     <footer class="bg-dark text-secondary py-3 textCenter">
       <section class="container mt-3">
         <article class="row justify-content-center">
           <div class="col-sm-12 col-md-4 col-footer">
             <h4></h4>
-            <div>
-              <img src="img/logo.jpg" alt="logo" class="w-25 logo-footer" />
+            <div class="text-center">
+              <img src="/img/image.png" id="imgFooter" alt="" />
             </div>
           </div>
           <div class="col-sm-12 col-md-4 my-1 col-footer">
@@ -84,10 +131,14 @@
                   >
                 </li>
                 <li>
-                  <a class="text-white text-decoration-none" href="admin.html">Admin</a>
+                  <a class="text-white text-decoration-none" href="admin.html"
+                    >Admin</a
+                  >
                 </li>
                 <li>
-                  <a class="text-white text-decoration-none" href="acercaDe.html"
+                  <a
+                    class="text-white text-decoration-none"
+                    href="acercaDe.html"
                     >Acerca de nosotros</a
                   >
                 </li>
@@ -95,14 +146,19 @@
             </div>
           </div>
           <div class="col-sm-12 col-md-4 my-1">
-            <h5 class="text-center text-white">Seguinos en nuestras <br> redes sociales:</h5>
+            <h5 class="text-center text-white">
+              Seguinos en nuestras <br />
+              redes sociales:
+            </h5>
             <div class="col-sm-12 col-md-10 text-center">
               <a
                 href="pages/error404.html"
                 target="_blank"
                 class="me-3 text-decoration-none"
               >
-                <i class="fab fa-facebook-square text-secondary fa-2x ms-lg-5"></i>
+                <i
+                  class="fab fa-facebook-square text-secondary fa-2x ms-lg-5"
+                ></i>
               </a>
               <a
                 href="pages/error404.html"
@@ -122,9 +178,11 @@
           </div>
         </article>
       </section>
-      <p class="text-center pt-3 text-white">&copy;Todos los derechos reservados.</p>
+      <p class="text-center pt-3 text-white">
+        &copy;Todos los derechos reservados.
+      </p>
     </footer>
   </body>
   <script src="js/bootstrap.min.js"></script>
-  <script src="/js/validaciones.js"></script>
+
 </html>
