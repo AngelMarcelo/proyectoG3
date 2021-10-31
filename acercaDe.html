@@ -31,21 +31,27 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <!-- Aqui tendriamos que poner el logo de la pagina o el nombre -->
-          <a class="navbar-brand ms-5" href="index.html">
-            <i class="fas fa-car text-white fs-1"></i>
+          <a class="logoNav text-center" href="index.html">
+            <!-- <i class="fas fa-car text-white fs-1"></i> -->
+            <div>
+              <img src="/img/image.png" id="tamanoImg" alt="">
+            </div>
           </a>
-          <div class="collapse navbar-collapse ms-5" id="navBar">
+          <div class="collapse navbar-collapse" id="navBar">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item mx-3">
-                <a class="nav-link "  href="index.html"
-                  >Inicio</a
-                >
+                <a class="nav-link" href="index.html">Inicio</a>
               </li>
               <li class="nav-item mx-3">
                 <a class="nav-link" href="admin.html">Admin</a>
               </li>
               <li class="nav-item mx-3">
-                <a class="nav-link active" aria-current="page" href="acercaDe.html">Acerca de nosotros</a>
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="acercaDe.html"
+                  >Acerca de nosotros</a
+                >
               </li>
             </ul>
           </div>
@@ -53,6 +59,12 @@
       </nav>
     </header>
     <main>
+      <div class="fondoAcercaDe">
+        <h1 class="display-5 text-white pe-5 pt-5 text-end">
+          Mas de 30 años <br />brindando nuestros servicios <br />
+          a toda la Argentina<br />
+        </h1>
+      </div>
     </main>
     <footer class="bg-dark text-secondary py-3 textCenter">
       <section class="container mt-3">
@@ -65,17 +77,17 @@
           </div>
           <div class="col-sm-12 col-md-4 my-1 col-footer">
             <div>
-              <ul class="navbar-nav mb-2">
-                <li class="nav-item">
-                  <a class="nav-link text-secondary" href="index.html"
+              <ul class="text-center" id="listaFooter">
+                <li>
+                  <a class="text-white text-decoration-none" href="index.html"
                     >Inicio</a
                   >
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link text-secondary" href="admin.html">Admin</a>
+                <li>
+                  <a class="text-white text-decoration-none" href="admin.html">Admin</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link text-secondary" href="acercaDe.html"
+                <li>
+                  <a class="text-white text-decoration-none" href="acercaDe.html"
                     >Acerca de nosotros</a
                   >
                 </li>
@@ -83,14 +95,14 @@
             </div>
           </div>
           <div class="col-sm-12 col-md-4 my-1">
-            <h5>Seguinos en nuestras redes sociales:</h5>
-            <div class="col-sm-12 col-md-10">
+            <h5 class="text-center text-white">Seguinos en nuestras <br> redes sociales:</h5>
+            <div class="col-sm-12 col-md-10 text-center">
               <a
                 href="pages/error404.html"
                 target="_blank"
                 class="me-3 text-decoration-none"
               >
-                <i class="fab fa-facebook-square text-secondary fa-2x"></i>
+                <i class="fab fa-facebook-square text-secondary fa-2x ms-lg-5"></i>
               </a>
               <a
                 href="pages/error404.html"
@@ -110,8 +122,9 @@
           </div>
         </article>
       </section>
-      <p class="text-center pt-3">&copy;Todos los derechos reservados.</p>
+      <p class="text-center pt-3 text-white">&copy;Todos los derechos reservados.</p>
     </footer>
-    <script src="js/bootstrap.min.js"></script>
   </body>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="/js/validaciones.js"></script>
 </html>

@@ -22,10 +22,41 @@
 }
 
 .logoNav{
-    width: 30%;
+    width: 35%;
 }
-
+#tamanoImg{
+    width: 35%;
+}
+#listaFooter{
+    list-style: none;
+}
 .fondoPrueba{
     background: url(/img/fondo\ auto\ form.png);
     background-size: cover;
+}
+
+.fondoAcercaDe{
+    background-image: url(/img/acercaDe.jpg);
+    background-repeat:no-repeat ;
+    background-size:cover ;
+    height: 50vh;
+}
+
+@media (max-width: 576px){
+    .fondoAcercaDe{
+        height: 60vh;
+    }
+    #tamanoImg{
+        width: 75%;
+    }
+}
+
+
+@media (min-width:576px) and (max-width: 768px){
+    .fondoAcercaDe{
+        height: 30vh;
+    }
+    #tamanoImg{
+        width: 65%;
+    }
 }
