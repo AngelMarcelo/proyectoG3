@@ -15,6 +15,22 @@ let formulario = getElementById("#formularioAutos");
 let arregloAutos= [];
 
 
+marca.addEventListener('blur', () => {
+    validacionTexto(marca);
+})
+modelo.addEventListener('blur', () =>{
+    validacionTexto(modelo);
+})
+codigo.addEventListener('blur', () =>{
+    validacionCodigo(codigo);
+})
+descripcion.addEventListener('blur', () =>{
+    validacionTexto(descripcion);
+})
+imagenUrl.addEventListener('blur', () =>{
+    validacionUrlImagen(imagenUrl);
+})
+
 function agregarAuto(){
     // se agrega un nuevo vehiculo
     let autoNuevo = new autos (
@@ -63,27 +79,12 @@ function crearFilasTabla(itemAuto) {
           // aqui de deben agregar los botones editar y borrar       
      </tr>;
     `
- };
+};
  
 
 
 
 
-marca.addEventListener('blur', () => {
-    validacionTexto(marca);
-})
-modelo.addEventListener('blur', () =>{
-    validacionTexto(modelo);
-})
-codigo.addEventListener('blur', () =>{
-    validacionCodigo(codigo);
-})
-descripcion.addEventListener('blur', () =>{
-    validacionTexto(descripcion);
-})
-imagenUrl.addEventListener('blur', () =>{
-    validacionUrlImagen(imagenUrl);
-})
 
 function borrarFilasAutos () {
     let tabla = document.querySelector("#tablaProducto");
