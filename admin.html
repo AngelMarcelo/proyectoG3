@@ -18,7 +18,7 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2">
-        <div class="container-fluid">
+        <div class="container">
           <button
             class="navbar-toggler"
             type="button"
@@ -31,18 +31,18 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <!-- Aqui tendriamos que poner el logo de la pagina o el nombre -->
-          <a class="logoNav ms-5" href="index.html">
+          <a class="navbar-brand" href="index.html">
             <i class="fas fa-car text-white fs-1"></i>
           </a>
-          <div class="collapse navbar-collapse" id="navBar">
+          <div class="collapse navbar-collapse ms-5" id="navBar">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item mx-3">
-                <a class="nav-link" href="index.html">Inicio</a>
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Inicio</a
+                >
               </li>
               <li class="nav-item mx-3">
-                <a class="nav-link active" aria-current="page" href="admin.html"
-                  >Admin</a
-                >
+                <a class="nav-link" href="admin.html">Admin</a>
               </li>
               <li class="nav-item mx-3">
                 <a class="nav-link" href="acercaDe.html">Acerca de nosotros</a>
@@ -52,8 +52,9 @@
         </div>
       </nav>
     </header>
-    <main class="fondoPrueba">
-      <section class="p-2 container">
+    <main >
+      <section class="fondoPrueba">
+         <section class="p-2 container">
         <h1 class="text-center text-warning mt-5">Gestor de Productos</h1>
         <form id="formulario">
           <div class="form-group transparent-input mb-3">
@@ -132,7 +133,25 @@
             </div>
           </div>
         </form>
-      </section>
+    </section>
+  </section>
+  <hr>
+        <section>
+          <article class="table-responsive">
+           <table class="table m-10">
+             <thead>
+              <tr>
+                <th scope="col">Marca</th>
+                <th scope="col">Modelo</th>
+                <th scope="col">Código</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Acciones</th>
+              </tr>
+             </thead>
+           </table>
+          </article>
+        </section>
     </main>
 
     <footer class="bg-dark text-secondary py-3 textCenter">
@@ -193,7 +212,7 @@
       </section>
       <p class="text-center pt-3">&copy;Todos los derechos reservados.</p>
     </footer>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="module" src="js/admin.js"></script>
   </body>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="/js/validaciones.js"></script>
 </html>

@@ -1,4 +1,5 @@
-#imagenFondo{
+/*estilos de imagen de fonto y de formulario*/
+/*#imagenFondo{
     position: absolute;
     background-size: cover;
     background-attachment: fixed;
@@ -6,10 +7,11 @@
     padding: 0;
     margin: 0;
     overflow: hidden;
-    height: 100vh;
+    height: auto;
     flex-flow: row;
-  
-}
+    max-width: 100%;
+    background-image: url(../img/fondo\ auto\ form.png);
+}*/
 
 #textoFormulario{
     align-items: flex-start;
