@@ -30,25 +30,36 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <!-- Aqui tendriamos que poner el logo de la pagina o el nombre -->
-          <a class="navbar-brand ms-5" href="index.html">
-            <i class="fas fa-car text-white fs-1"></i>
+          <a class="logoNav" href="index.html" id="posicionLogoNav">
+            <div>
+              <img src="/img/image.png" id="tamanoImg" alt="" />
+            </div>
           </a>
-          <div class="collapse navbar-collapse ms-5" id="navBar">
+          <div class="collapse navbar-collapse" id="navBar">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item mx-3">
-                <a class="nav-link active" aria-current="page" href="index.html"
-                  >Inicio</a
-                >
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
               </li>
               <li class="nav-item mx-3">
                 <a class="nav-link" href="admin.html">Admin</a>
               </li>
               <li class="nav-item mx-3">
-                <a class="nav-link" href="acercaDe.html">Acerca de nosotros</a>
-              </li>
+                <a
+                  class="nav-link"
+                  href="acercaDe.html"
+                  >Acerca de nosotros</a
+                >
+              </li>     
             </ul>
           </div>
+          <a
+          
+            class="nav-link text-lg-end text-decoration-none text-secondary "
+            href="/error404.html"
+            >
+            <i class="fas fa-user me-md-1"></i>
+            Ingresar</a
+          >
         </div>
       </nav>
     </header>
@@ -65,23 +76,29 @@
         <article class="row justify-content-center">
           <div class="col-sm-12 col-md-4 col-footer">
             <h4></h4>
-            <div>
-              <img src="img/logo.jpg" alt="logo" class="w-25 logo-footer" />
+            <div class="text-center">
+              <a href="index.html">
+                <img src="/img/image.png" id="imgFooter" alt="" />
+              </a>
             </div>
           </div>
           <div class="col-sm-12 col-md-4 my-1 col-footer">
             <div>
-              <ul class="navbar-nav mb-2">
-                <li class="nav-item">
-                  <a class="nav-link text-secondary" href="index.html"
+              <ul class="text-center" id="listaFooter">
+                <li>
+                  <a class="text-white text-decoration-none" href="index.html"
                     >Inicio</a
                   >
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link text-secondary" href="admin.html">Admin</a>
+                <li>
+                  <a class="text-white text-decoration-none" href="admin.html"
+                    >Admin</a
+                  >
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link text-secondary" href="acercaDe.html"
+                <li>
+                  <a
+                    class="text-white text-decoration-none"
+                    href="acercaDe.html"
                     >Acerca de nosotros</a
                   >
                 </li>
@@ -89,25 +106,27 @@
             </div>
           </div>
           <div class="col-sm-12 col-md-4 my-1">
-            <h5>Seguinos en nuestras redes sociales:</h5>
-            <div class="col-sm-12 col-md-10">
+            <h5 class="text-center text-white">
+              Seguinos en nuestras <br />
+              redes sociales:
+            </h5>
+            <div class="col-sm-12 col-md-10 text-center">
               <a
-                href="pages/error404.html"
-                target="_blank"
+                href="error404.html"
                 class="me-3 text-decoration-none"
               >
-                <i class="fab fa-facebook-square text-secondary fa-2x"></i>
+                <i
+                  class="fab fa-facebook-square text-secondary fa-2x ms-lg-5"
+                ></i>
               </a>
               <a
-                href="pages/error404.html"
-                target="_blank"
+                href="error404.html"
                 class="me-3 text-decoration-none"
               >
                 <i class="fab fa-twitter-square text-secondary fa-2x"></i>
               </a>
               <a
-                href="pages/error404.html"
-                target="_blank"
+                href="error404.html"
                 class="text-decoration-none"
               >
                 <i class="fab fa-instagram-square text-secondary fa-2x"></i>
@@ -116,7 +135,9 @@
           </div>
         </article>
       </section>
-      <p class="text-center pt-3">&copy;Todos los derechos reservados.</p>
+      <p class="text-center pt-3 text-white">
+        &copy;Todos los derechos reservados.
+      </p>
     </footer>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/cards.js"></script>
