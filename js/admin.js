@@ -8,10 +8,10 @@ import {
 // se agregan variales
 let  marca = document.querySelector("#marca");
 let modelo = document.querySelector("#modelo");
-let codigo = document.querySelectorAll("#codigo");
+let codigo = document.querySelector("#codigo");
 let descripcion = document.querySelector("#descripcion");
-let imagen = document.querySelector("#imagenUrl");
-let formulario = document.querySelector("#formularioAutos");
+let imagenUrl = document.querySelector("#imagenUrl");
+let formulario = document.querySelector("#formulario");
 let arregloAutos= [];
 
 
@@ -33,13 +33,13 @@ imagenUrl.addEventListener('blur', () =>{
 formulario.addEventListener("submit", guardarAuto);
 
 
-function guardarAuto(e){
+function guardarAuto (e) {
   e.preventDefault();
   // se verifica que pase las validaciones de los imputs
   if( validacionFormulario){
     // se pregunta el estado de variable editarAuto
     // aun se desconoc el nombre correcto de la funcion
-    if(editarAuto === false){
+    if(editarAuto == false){
       // crear el producto
       console.log("crear el producto");
       agregarAuto();
