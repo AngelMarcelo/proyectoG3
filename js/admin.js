@@ -30,6 +30,7 @@ descripcion.addEventListener('blur', () =>{
 imagenUrl.addEventListener('blur', () =>{
     validacionUrlImagen(imagenUrl);
 })
+formulario.addEventListener("submit", );//colocar despues de la "coma" el nombre de la funcion que guardara el producto
 
 function borrarFilasAutos () {
     let tabla = document.querySelector("#tablaProducto");

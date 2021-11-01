@@ -14,6 +14,7 @@
       src="https://kit.fontawesome.com/3fc9c95924.js"
       crossorigin="anonymous"
     ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <header>
@@ -52,94 +53,94 @@
         </div>
       </nav>
     </header>
-    <main >
+    <main>
       <section class="fondoPrueba">
-         <section class="p-2 container">
-        <h1 class="text-center text-warning mt-5">Gestor de Productos</h1>
-        <form id="formulario">
-          <div class="form-group transparent-input mb-3">
-            <label for="" class="text-white">Marca</label>
-            <input
-              type="text"
-              class="form-control"
-              id="marca"
-              aria-describedby="marcaAuto"
-              placeholder="marca"
-              maxlength="20"
-              required
-            />
-            <div class="invalid-feedback">Este campo es obligatorio</div>
-          </div>
-          <div class="form-group mb-3">
-            <label for="" class="text-white">Modelo</label>
-            <input
-              type="text"
-              class="form-control"
-              id="modelo"
-              aria-describedby="modeloAuto"
-              placeholder="modelo"
-              maxlength="30"
-              required
-            />
-            <div class="invalid-feedback">Este campo es obligatorio</div>
-          </div>
-          <div class="form-group mb-3">
-            <label for="" class="text-white">Código</label>
-            <input
-              type="text"
-              class="form-control"
-              id="codigo"
-              aria-describedby="codigoAuto"
-              placeholder="código"
-              maxlength="3"
-              required
-            />
-            <div class="invalid-feedback">Ingrese un codigo valido</div>
-          </div>
-          <div class="form-group mb-3">
-            <label for="" class="text-white">Descripción</label>
-            <input
-              type="text"
-              class="form-control"
-              id="descripcion"
-              aria-describedby="descripcionAuto"
-              placeholder="decripcion"
-              maxlength="200"
-              required
-            />
-            <div class="invalid-feedback">Agregue una descripcion valida</div>
-          </div>
-
-          <div class="form-group mb-3">
-            <label for=""class="text-white">Imagen</label>
-            <input
-              type="text"
-              class="form-control"
-              id="imagenUrl"
-              placeholder="imagen"
-              required
-            />
-          </div>
-          <div class="invalid-feedback">Campo obligatorio</div>
-          <button type="submit" class="btn btn-primary my-3">Agregar</button>
-          <div
-            class="alert alert-danger d-flex align-items-center d-none"
-            role="alert"
-            id="alerta"
-          >
-            <i class="fas fa-exclamation-circle fa-2x ms-lg-2"></i>
-            <div>
-              Por favor complete todos los campos del formulario para continuar
+        <section class="p-2 container">
+          <h1 class="text-center text-warning mt-5">Gestor de Productos</h1>
+          <form id="formulario">
+            <div class="form-group transparent-input mb-3">
+              <label for="" class="text-white">Marca</label>
+              <input
+                type="text"
+                class="form-control"
+                id="marca"
+                aria-describedby="marcaAuto"
+                placeholder="marca"
+                maxlength="20"
+                required
+              />
+              <div class="invalid-feedback">Este campo es obligatorio</div>
             </div>
-          </div>
-        </form>
-    </section>
-  </section>
-  <hr>
-        <section>
-          <article class="table-responsive">
-           <table class="table m-10">
-             <thead>
+            <div class="form-group mb-3">
+              <label for="" class="text-white">Modelo</label>
+              <input
+                type="text"
+                class="form-control"
+                id="modelo"
+                aria-describedby="modeloAuto"
+                placeholder="modelo"
+                maxlength="30"
+                required
+              />
+              <div class="invalid-feedback">Este campo es obligatorio</div>
+            </div>
+            <div class="form-group mb-3">
+              <label for="" class="text-white">Código</label>
+              <input
+                type="text"
+                class="form-control"
+                id="codigo"
+                aria-describedby="codigoAuto"
+                placeholder="código"
+                maxlength="3"
+                required
+              />
+              <div class="invalid-feedback">Ingrese un codigo valido</div>
+            </div>
+            <div class="form-group mb-3">
+              <label for="" class="text-white">Descripción</label>
+              <input
+                type="text"
+                class="form-control"
+                id="descripcion"
+                aria-describedby="descripcionAuto"
+                placeholder="decripcion"
+                maxlength="200"
+                required
+              />
+              <div class="invalid-feedback">Agregue una descripcion valida</div>
+            </div>
+            <div class="form-group mb-3">
+              <label for="" class="text-white">Imagen</label>
+              <input
+                type="text"
+                class="form-control"
+                id="imagenUrl"
+                placeholder="imagen"
+                required
+              />
+            </div>
+            <div class="invalid-feedback">Campo obligatorio</div>
+            <button type="submit" class="btn btn-primary my-3">Agregar</button>
+            <div
+              class="alert alert-danger d-flex align-items-center d-none"
+              role="alert"
+              id="alerta"
+            >
+              <i class="fas fa-exclamation-circle fa-2x ms-lg-2"></i>
+              <div>
+                Por favor complete todos los campos del formulario para
+                continuar
+              </div>
+            </div>
+          </form>
+        </section>
+      </section>
+      <hr />
+      <section>
+        <article class="table-responsive">
+          <table class="table m-10">
+            <thead>
               <tr>
                 <th scope="col">Marca</th>
                 <th scope="col">Modelo</th>
@@ -148,10 +149,10 @@
                 <th scope="col">Imagen</th>
                 <th scope="col">Acciones</th>
               </tr>
-             </thead>
-           </table>
-          </article>
-        </section>
+            </thead>
+          </table>
+        </article>
+      </section>
     </main>
 
     <footer class="bg-dark text-secondary py-3 textCenter">
