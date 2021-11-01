@@ -30,6 +30,7 @@ descripcion.addEventListener('blur', () =>{
 imagenUrl.addEventListener('blur', () =>{
     validacionUrlImagen(imagenUrl);
 })
+formulario.addEventListener("submit", guardarAuto);
 
 
 function guardarAuto(e){
