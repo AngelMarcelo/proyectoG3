@@ -6,12 +6,12 @@ import {
     validacionUrlImagen,
 } from "./validaciones.js";
 // se agregan variales
-let  marca = getElementById("#marca") ;
-let modelo = getElementById("#modelo");
-let codigo = getElementById("#codigo");
-let descripcion = getElementById("#descripcion");
-let imagen = getElementById("#imagenUrl");
-let formulario = getElementById("#formularioAutos");
+let  marca = document.querySelector("#marca");
+let modelo = document.querySelector("#modelo");
+let codigo = document.querySelectorAll("#codigo");
+let descripcion = document.querySelector("#descripcion");
+let imagen = document.querySelector("#imagenUrl");
+let formulario = document.querySelector("#formularioAutos");
 let arregloAutos= [];
 
 
