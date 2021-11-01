@@ -31,6 +31,29 @@ imagenUrl.addEventListener('blur', () =>{
     validacionUrlImagen(imagenUrl);
 })
 
+
+function guardarAuto(e){
+  e.preventDefault();
+  // se verifica que pase las validaciones de los imputs
+  if( validacionFormulario){
+    // se pregunta el estado de variable editarAuto
+    // aun se desconoc el nombre correcto de la funcion
+    if(editarAuto === false){
+      // crear el producto
+      console.log("crear el producto");
+      agregarAuto();
+    } else{
+      // modificar el auto
+      console.log("aqui puedo modificar el auto");
+      // aqui falta funcion actualizar producto!!
+    }
+  } else {
+    // no debe realizar nada
+    console.log("no deberia pasar nada")
+    }
+};
+
+
 function agregarAuto(){
     // se agrega un nuevo vehiculo
     let autoNuevo = new autos (
@@ -51,7 +74,7 @@ function agregarAuto(){
     // se debe cargar los datos en la tabla
     crearFilasTabla(autoNuevo);
     // mostar mensaje al usuario, indicando que se agregó correcctamente
-
+    Swal.fire("Good job!", "You clicked the button!", "success");
 };
 
 function limpiarFormulario(){
@@ -81,10 +104,6 @@ function crearFilasTabla(itemAuto) {
     `
 };
  
-
-
-
-
 
 function borrarFilasAutos () {
     let tabla = document.querySelector("#tablaProducto");
