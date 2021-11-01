@@ -43,3 +43,4 @@ export function validacionFormulario() {
     alerta.className = "alert alert-danger d-flex align-items-center d-none";
   }
 }
+

@@ -4,16 +4,20 @@ import {
     validacionCodigo,
     validacionFormulario,
     validacionUrlImagen,
+  
 } from "./validaciones.js";
 // se agregan variales
-let  marca = document.querySelector("#marca");
+let marca = document.querySelector("#marca");
 let modelo = document.querySelector("#modelo");
 let codigo = document.querySelector("#codigo");
 let descripcion = document.querySelector("#descripcion");
 let imagenUrl = document.querySelector("#imagenUrl");
 let formulario = document.querySelector("#formulario");
 let arregloAutos= [];
+let editarAuto = false; //si es false significa que tengo que agregar un nuevo producto
+// true significa que tengo que modificar un  producto existente
 
+cargarInicial()
 
 marca.addEventListener('blur', () => {
     validacionTexto(marca);
@@ -39,7 +43,7 @@ function guardarAuto (e) {
   if( validacionFormulario){
     // se pregunta el estado de variable editarAuto
     // aun se desconoc el nombre correcto de la funcion
-    if(editarAuto == false){
+    if(editarAuto ===false){
       // crear el producto
       console.log("crear el producto");
       agregarAuto();
@@ -47,6 +51,7 @@ function guardarAuto (e) {
       // modificar el auto
       console.log("aqui puedo modificar el auto");
       // aqui falta funcion actualizar producto!!
+      actualizarAuto()
     }
   } else {
     // no debe realizar nada
@@ -62,7 +67,7 @@ function agregarAuto(){
         modelo.value,
         codigo.value,
         descripcion.value,
-        imagen.value,
+        imagenUrl.value,
  );
     console.log(autoNuevo);
     //agregar datos del auto al arreglo
@@ -75,7 +80,7 @@ function agregarAuto(){
     // se debe cargar los datos en la tabla
     crearFilasTabla(autoNuevo);
     // mostar mensaje al usuario, indicando que se agregó correcctamente
-    Swal.fire("Good job!", "You clicked the button!", "success");
+    Swal.fire("Bien hecho", "Has apretado el boton correcto", "success");
 };
 
 function limpiarFormulario(){
@@ -84,34 +89,92 @@ function limpiarFormulario(){
     modelo.className = "form-control";
     codigo.className ="form-control";
     descripcion.className = "form-control";
-    imagen.className = "form-control";
+    imagenUrl.className = "form-control";
     // a continuacion se necesita la funcion editar
+    editarAuto = false
 };
+
+function cargarInicial() {
+  // traer los productos del localstorage si existieran sino dejar el arreglo vacio.
+  arregloAutos = JSON.parse(localStorage.getItem("arregloAutos")) || [];
+  // si hay productos dentro del arreglo entonces los muestro en la tabla
+  arregloAutos.forEach((itemAuto) => {
+    // codigo que se ejecuta por cada el elemento del arreglo
+    crearFilasTabla(itemAuto);
+  });
+}
 
 
 function crearFilasTabla(itemAuto) {
     let tabla = document.querySelector("#tablaAuto");
-    console.log("itemAuto");
+    console.log(itemAuto);
     tabla.innerHTML += `
     <tr>
-                 <th scope="row">${itemAuto.marca}</th>
-                 <td>${itemAuto.modelo}</td>
-                 <td>${itemAuto.codigo}</td>
-                 <td>${itemAuto.descripcion}</td>
-                 <td>${itemAuto.imagen}</td>
- 
-          // aqui de deben agregar los botones editar y borrar       
+         <th scope="row">${itemAuto.marca}</th>
+         <td>${itemAuto.modelo}</td>
+         <td>${itemAuto.codigo}</td>
+         <td>${itemAuto.descripcion}</td>
+          <td>${itemAuto.imagen}</td>
+          <td>
+      <button class="btn btn-warning" onclick="prepararEdicion('${itemAuto.marca}')">Editar</button>
+      <button class="btn btn-danger" onclick="eliminarAutos('${itemAuto.marca}')" >Borrar</button>
+    </td>     
      </tr>;
     `
 };
+window.prepararEdicion = (codigoAuto) => {
+  console.log(codigoAuto);
+  // buscar el objeto
+  let autoBuscado = arregloAutos.find((itemAuto) => {
+    return itemAuto.marca == codigoAuto;
+  });
+  console.log(autoBuscado);
+  // mostrarlo en el formulario
+  marca.value = autoBuscado.marca;
+  modelo.value = autoBuscado.modelo;
+  codigo.value = autoBuscado.codigo;
+  descripcion.value = autoBuscado.descripcion;
+  imagenUrl.value = autoBuscado.imagenUrl;
+  // cambio el valor de la variable productoExistente
+  editarAuto = true;
+};
+
+function actualizarAuto() {
+  // buscar la posicion del elemento a editar dentro del arreglo
+  let posicionAuto = arregloAutos.findIndex((itemAuto) => {
+    return itemAuto.marca == marca.value;
+  });
+  console.log(posicionAuto);
+  // modificar los datos de esa posicion del arreglo
+  arregloAutos[posicionAuto].marca = marca.value;
+  arregloAutos[posicionAuto].modelo = modelo.value;
+  arregloAutos[posicionAuto].codigo = codigo.value;
+  arregloAutos[posicionAuto].descripcion = descripcion.value;
+  arregloAutos[posicionAuto].imagenUrl = imagenUrl.value;
+  // modificar el localstorage
+  localStorage.setItem("arregloAutos", JSON.stringify(arregloAutos));
+  // volver a dibujar la tabla
+  borrarFilasAutos();
+  arregloAutos.forEach((itemAuto) => {
+    crearFilasTabla(itemAuto);
+  });
+  // limpiar formulario
+  limpiarFormulario();
+  //  mostrar mensaje al usuario
+  Swal.fire(
+    "Producto modificado",
+    "Su producto ha sido correctamente modificado",
+    "success"
+  );
+}
  
 
 function borrarFilasAutos () {
-    let tabla = document.querySelector("#tablaProducto");
+    let tabla = document.querySelector("#tablaAuto");
     tabla.innerHTML = "";
 };
   
-  window.eliminarAutos = (codigo) => {
+  window.eliminarAutos = (marca) => {
     Swal.fire({
       title: "¿Esta seguro que desea eliminar este producto?",
       text: "Una vez eliminado el producto no se puede volver a recuperar",
@@ -124,18 +187,18 @@ function borrarFilasAutos () {
     }).then((result) => {
       if (result.isConfirmed) {
         
-        let filtrarAutos = listaAutos.filter((itemAutos) => {
-          return itemAutos.codigo != codigo;
+        let filtrarAutos = arregloAutos.filter((itemAutos) => {
+          return itemAutos.marca != marca;
         });
   
         console.log(filtrarAutos);
         
-        listaAutos = filtrarAutos;
+        arregloAutos = filtrarAutos;
         
-        localStorage.setItem("arregloAutos", JSON.stringify(listaAutos));
+        localStorage.setItem("arregloAutos", JSON.stringify(arregloAutos));
         
-        borrarFilas();
-        listaAutos.forEach((itemAutos) => {
+        borrarFilasAutos();
+        arregloAutos.forEach((itemAutos) => {
           crearFilas(itemAutos);
         });
         Swal.fire(
