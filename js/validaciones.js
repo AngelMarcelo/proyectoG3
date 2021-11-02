@@ -20,8 +20,9 @@ export function validacionCodigo(input) {
 }
 
 export function validacionUrlImagen(input) {
-  let urlImagen = /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/;
-  if (input.value.trim().length > 0 && urlImagen.test(input.value.trim())) {
+  let imagenUrl = /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/;
+  
+  if (input.value.trim() != '' && imagenUrl.test(input.value.trim())) {
     input.className = "form-control is-valid";
     return true;
   } else {
@@ -38,9 +39,11 @@ export function validacionFormulario() {
     validacionTexto(descripcion) &&
     validacionUrlImagen(imagenUrl)
   ) {
-    alerta.className = "alert alert-danger d-flex align-items-center";
+    alerta.className = 'alert alert-danger mt-4 d-none';
+    return true;
   } else {
-    alerta.className = "alert alert-danger d-flex align-items-center d-none";
+    alerta.className = 'alert alert-danger mt-4';
+    return false;
   }
 }
 

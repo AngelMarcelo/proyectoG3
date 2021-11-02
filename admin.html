@@ -16,6 +16,7 @@
       src="https://kit.fontawesome.com/3fc9c95924.js"
       crossorigin="anonymous"
     ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <header>
@@ -75,8 +76,6 @@
                 id="marca"
                 aria-describedby="marcaAuto"
                 placeholder="marca"
-                maxlength="20"
-                required
               />
               <div class="invalid-feedback">Este campo es obligatorio</div>
             </div>
@@ -88,8 +87,6 @@
                 id="modelo"
                 aria-describedby="modeloAuto"
                 placeholder="modelo"
-                maxlength="30"
-                required
               />
               <div class="invalid-feedback">Este campo es obligatorio</div>
             </div>
@@ -101,8 +98,6 @@
                 id="codigo"
                 aria-describedby="codigoAuto"
                 placeholder="código"
-                maxlength="3"
-                required
               />
               <div class="invalid-feedback">Ingrese un codigo valido</div>
             </div>
@@ -114,8 +109,6 @@
                 id="descripcion"
                 aria-describedby="descripcionAuto"
                 placeholder="decripcion"
-                maxlength="200"
-                required
               />
               <div class="invalid-feedback">Agregue una descripcion valida</div>
             </div>
@@ -127,18 +120,16 @@
                 class="form-control"
                 id="imagenUrl"
                 placeholder="imagen"
-                required
               />
             </div>
             <div class="invalid-feedback">Campo obligatorio</div>
             <button type="submit" class="btn btn-primary my-3">Agregar</button>
             <div
-              class="alert alert-danger d-flex align-items-center d-none"
+              class="alert alert-danger mt-4 d-none"
               role="alert"
-              id="alerta"
-            >
-              <i class="fas fa-exclamation-circle fa-2x ms-lg-2"></i>
+              id="alerta">
               <div>
+                <i class="fas fa-exclamation-circle fa-2x ms-lg-2"></i>
                 Por favor complete todos los campos del formulario para
                 continuar
               </div>
@@ -147,7 +138,8 @@
         </section>
       </section>
       <hr />
-      <section>
+      <section class="container">
+        <button class="btn btn-primary" id="btnAgregarAuto">Nuevo Auto</button>
         <article class="table-responsive">
           <table class="table m-10">
             <thead>
@@ -160,8 +152,7 @@
                 <th scope="col">Acciones</th>
               </tr>
             </thead>
-            <tbody id="tablaAuto">
-           </tbody>
+            <tbody id="tablaAuto"></tbody>
           </table>
         </article>
       </section>
@@ -207,24 +198,15 @@
               redes sociales:
             </h5>
             <div class="col-sm-12 col-md-10 text-center">
-              <a
-                href="error404.html"
-                class="me-3 text-decoration-none"
-              >
+              <a href="error404.html" class="me-3 text-decoration-none">
                 <i
                   class="fab fa-facebook-square text-secondary fa-2x ms-lg-5"
                 ></i>
               </a>
-              <a
-                href="error404.html"
-                class="me-3 text-decoration-none"
-              >
+              <a href="error404.html" class="me-3 text-decoration-none">
                 <i class="fab fa-twitter-square text-secondary fa-2x"></i>
               </a>
-              <a
-                href="error404.html"
-                class="text-decoration-none"
-              >
+              <a href="error404.html" class="text-decoration-none">
                 <i class="fab fa-instagram-square text-secondary fa-2x"></i>
               </a>
             </div>
