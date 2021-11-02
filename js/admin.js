@@ -17,7 +17,7 @@ let arregloAutos= [];
 let editarAuto = false; //si es false significa que tengo que agregar un nuevo producto
 // true significa que tengo que modificar un  producto existente
 
-cargarInicial()
+cargarInicial();
 
 marca.addEventListener('blur', () => {
     validacionTexto(marca);
@@ -43,7 +43,7 @@ function guardarAuto (e) {
   if( validacionFormulario){
     // se pregunta el estado de variable editarAuto
     // aun se desconoc el nombre correcto de la funcion
-    if(editarAuto ===false){
+    if(editarAuto === false){
       // crear el producto
       console.log("crear el producto");
       agregarAuto();
