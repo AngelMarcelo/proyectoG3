@@ -79,8 +79,7 @@ function agregarAuto() {
   // se debe cargar los datos en la tabla
   crearFilasTabla(autoNuevo);
   // mostar mensaje al usuario, indicando que se agregó correcctamente
-  Swal.fire(
-    "Bien hecho", "Has apretado el boton correcto", "success"
+  Swal.fire("Bien hecho", "Has apretado el boton correcto", "success"
   );
 };
 
@@ -114,9 +113,9 @@ function crearFilasTabla(itemAuto) {
          <td>${itemAuto.modelo}</td>
          <td>${itemAuto.codigo}</td>
          <td>${itemAuto.descripcion}</td>
-          <td>${itemAuto.imagen}</td>
+          <td>${itemAuto.imagenUrl}</td>
           <td>
-           <button class="btn btn-warning" onclick="prepararEdicion('${itemAuto.marca}')">Editar</button>
+           <button class="btn btn-warning" onclick="prepararEdicion('${itemAuto.codigo}')">Editar</button>
             <button class="btn btn-danger" onclick="eliminarAutos('${itemAuto.codigo}')" >Borrar</button>
           </td>     
     </tr>`;
@@ -125,7 +124,7 @@ window.prepararEdicion = (codigoAuto) => {
   console.log(codigoAuto);
   // buscar el objeto
   let autoBuscado = arregloAutos.find((itemAuto) => {
-    return itemAuto.marca == codigoAuto;
+    return itemAuto.codigo == codigoAuto;
   });
   console.log(autoBuscado);
   // mostrarlo en el formulario
@@ -141,13 +140,12 @@ window.prepararEdicion = (codigoAuto) => {
 function actualizarAuto() {
   // buscar la posicion del elemento a editar dentro del arreglo
   let posicionAuto = arregloAutos.findIndex((itemAuto) => {
-    return itemAuto.marca == marca.value;
+    return itemAuto.codigo == codigo.value;
   });
   console.log(posicionAuto);
   // modificar los datos de esa posicion del arreglo
   arregloAutos[posicionAuto].marca = marca.value;
   arregloAutos[posicionAuto].modelo = modelo.value;
-  arregloAutos[posicionAuto].codigo = codigo.value;
   arregloAutos[posicionAuto].descripcion = descripcion.value;
   arregloAutos[posicionAuto].imagenUrl = imagenUrl.value;
   // modificar el localstorage
