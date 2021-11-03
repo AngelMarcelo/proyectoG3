@@ -47,7 +47,7 @@ export function validacionFormulario() {
   }
 }
 
-function validacionLogin (email){
+function validacionEmail (email){
   // expresion regular
   let email = /[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/;
   if(email.test(email.value)){
@@ -71,3 +71,5 @@ function validacionContraseña(input){
     return false;
   }
 };
+
+function validacionLogin ()
