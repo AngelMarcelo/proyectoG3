@@ -17,8 +17,13 @@ h1,h2,h3,h4,h5{
 .TamanoFuenteForm{
     font-size: 12px;
 }
-#bg-inicio{
+/* #bg-inicio{
     background-image: url(/img/bg-inicio.png);
+} */
+.altoImagen{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
 }
 
 #textoFormulario{
@@ -155,7 +160,7 @@ h1,h2,h3,h4,h5{
 }
 
 
-@media (min-width:576px) and (max-width: 768px){
+@media (min-width:577px) and (max-width: 768px){
     .fondoAcercaDe{
         height: 30vh;
     }
@@ -184,5 +189,13 @@ h1,h2,h3,h4,h5{
     .anchoLogin{
         width: 50%;
     }
+    #altoCard{
+        height: 490px;
+    }
 
+}
+@media (min-width: 769px){
+    #altoCard{
+        height: 490px;
+    }
 }

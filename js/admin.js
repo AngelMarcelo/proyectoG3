@@ -5,6 +5,7 @@ import {
   validacionFormulario,
   validacionUrlImagen,
 } from "./validaciones.js";
+
 // se agregan variales
 let marca = document.querySelector("#marca");
 let modelo = document.querySelector("#modelo");
@@ -57,6 +58,7 @@ function guardarAuto(e) {
     // no debe realizar nada
     console.log("no deberia pasar nada")
   }
+
 };
 
 
@@ -79,7 +81,7 @@ function agregarAuto() {
   // se debe cargar los datos en la tabla
   crearFilasTabla(autoNuevo);
   // mostar mensaje al usuario, indicando que se agregó correcctamente
-  Swal.fire("Bien hecho", "Has apretado el boton correcto", "success"
+  Swal.fire("Auto cargado!", "El auto fue cargado con exito", "success"
   );
 };
 
