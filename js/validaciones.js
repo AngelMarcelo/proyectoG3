@@ -61,7 +61,7 @@ function validacionEmail (email){
 
 function validacionContraseña(input){
   // expresion regular
-  let contraseña = ^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$;
+  let contraseña = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
   // Entre 8 y 10 caracteres, por lo menos un digito y un alfanumérico, y no puede contener caracteres espaciales
   if(input.value.trim() != ''){
     input.className = "form-control is valid";
