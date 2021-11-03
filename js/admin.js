@@ -43,11 +43,7 @@ function guardarAuto(e) {
   if (validacionFormulario()) {
     // se pregunta el estado de variable editarAuto
     // aun se desconoc el nombre correcto de la funcion
-<<<<<<< HEAD
-    if(editarAuto === false){
-=======
     if (editarAuto === false) {
->>>>>>> botonBorrarProducto
       // crear el producto
       console.log("crear el producto");
       agregarAuto();
