@@ -17,6 +17,9 @@ h1,h2,h3,h4,h5{
 .TamanoFuenteForm{
     font-size: 12px;
 }
+#bg-inicio{
+    background-image: url(/img/bg-inicio.png);
+}
 
 #textoFormulario{
     align-items: flex-start;
@@ -146,6 +149,9 @@ h1,h2,h3,h4,h5{
         width: 90%;
     }
 
+    .marginTel{
+        margin: 30px 0px;
+    }
 }
 
 
