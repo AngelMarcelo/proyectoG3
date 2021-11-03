@@ -1,4 +1,4 @@
-/*inicializacion de objeto auto a trave de clases*/
+/*inicializacion de objeto auto a traves de clases*/
 export class autos {
     constructor(marca, modelo, codigo, descripcion, imagenUrl){
         this.marca = marca;
