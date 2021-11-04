@@ -47,29 +47,3 @@ export function validacionFormulario() {
   }
 }
 
-function validacionEmail (email){
-  // expresion regular
-  let email = /[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/;
-  if(email.test(email.value)){
-    email.className = "form-control is-valid";
-    return true;
-  } else {
-    email.className = "form-control is-invalid";
-    return false;
-  }
-}; 
-
-function validacionContraseña(input){
-  // expresion regular
-  let contraseña = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
-  // Entre 8 y 10 caracteres, por lo menos un digito y un alfanumérico, y no puede contener caracteres espaciales
-  if(input.value.trim() != ''){
-    input.className = "form-control is valid";
-    return true;
-  } else {
-    input.className = "form-control is-invalid";
-    return false;
-  }
-};
-
-function validacionLogin ()
