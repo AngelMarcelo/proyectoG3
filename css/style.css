@@ -17,6 +17,14 @@ h1,h2,h3,h4,h5{
 .TamanoFuenteForm{
     font-size: 12px;
 }
+/* #bg-inicio{
+    background-image: url(/img/bg-inicio.png);
+} */
+.altoImagen{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
 
 #textoFormulario{
     align-items: flex-start;
@@ -135,10 +143,6 @@ h1,h2,h3,h4,h5{
     .logoNav{
         width: 32%;
     }
-    .posicionError{
-        position: relative;
-        top: 150px;
-    }
     .posicionLogin{
         padding: 60px 0px;
     }
@@ -146,10 +150,13 @@ h1,h2,h3,h4,h5{
         width: 90%;
     }
 
+    .marginTel{
+        margin: 30px 0px;
+    }
 }
 
 
-@media (min-width:576px) and (max-width: 768px){
+@media (min-width:577px) and (max-width: 768px){
     .fondoAcercaDe{
         height: 30vh;
     }
@@ -168,15 +175,21 @@ h1,h2,h3,h4,h5{
     .logoNav{
         width: 60%;
     }
-    .posicionError{
-        position: relative;
-        top: 250px;
-    }
+
     .posicionLogin{
         padding: 100px 0px;
     }
     .anchoLogin{
         width: 50%;
+    }
+    #altoCard{
+        height: 490px;
+    }
+
+}
+@media (min-width: 769px){
+    #altoCard{
+        height: 490px;
     }
 
 }
