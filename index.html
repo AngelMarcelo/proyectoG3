@@ -63,8 +63,48 @@
         </div>
       </nav>
     </header>
-    <main class="container my-5">
-      <section>
+    <main >
+      <div>
+        <section id="carousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselG3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselG3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselG3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+                 <div class="carousel-caption d-none d-md-block">
+                   <h1 class="fw-bold">Soluciones a la medida de tus necesidades</h1>
+                 </div>
+                <img src="../img/atencion al cliente.png" class="d-block w-100" alt="atencion al cliente">
+              </div>
+            <div class="carousel-item">
+                <div class="carousel-caption d-none d-md-block">
+                  <h1 class="fw-bold">Que no te hablen de su potencia, vení a probarlo</h1>
+                </div>
+                <img src="../img/yellow camaro.png" class="d-block w-100" alt="camaro yellow">
+             </div>
+            <div class="carousel-item">
+              <div class="carousel-caption d-none d-md-block">
+                <h1 class="fw-bold">Lideres en seguridad, costo de reparación y posventa</h1>
+              </div>
+              <img src="../img/servicio pos venta .png" class="d-block w-100 " alt="servicio posventa">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselG3" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselG3" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+       </section>
+      </div>
+       
+
+      <section class="container my-5">
         <h1 class="display-3 text-center text-dark">Catalago de Autos</h1>
         <hr />
         <article class="row" id="cardAutos">

@@ -74,9 +74,11 @@
                 class="form-control"
                 id="marca"
                 aria-describedby="marcaAuto"
-                placeholder="marca"
+                placeholder="Toyota"
+                maxlength="15"
+                required
               />
-              <div class="invalid-feedback">Este campo es obligatorio</div>
+              <div class="invalid-feedback">Ingrese una marca valida</div>
             </div>
             <div class="form-group mb-3">
               <label for="" class="text-white">Modelo</label>
@@ -85,9 +87,11 @@
                 class="form-control"
                 id="modelo"
                 aria-describedby="modeloAuto"
-                placeholder="modelo"
+                placeholder="Prius"
+                maxlength="25"
+                required
               />
-              <div class="invalid-feedback">Este campo es obligatorio</div>
+              <div class="invalid-feedback">Ingrese un modelo valido</div>
             </div>
             <div class="form-group mb-3">
               <label for="" class="text-white">Código</label>
@@ -96,7 +100,9 @@
                 class="form-control"
                 id="codigo"
                 aria-describedby="codigoAuto"
-                placeholder="código"
+                placeholder="829"
+                maxlength="3"
+                required
               />
               <div class="invalid-feedback">Ingrese un codigo valido</div>
             </div>
@@ -107,7 +113,9 @@
                 class="form-control"
                 id="descripcion"
                 aria-describedby="descripcionAuto"
-                placeholder="decripcion"
+                maxlength="150"
+                required
+                
               />
               <div class="invalid-feedback">Agregue una descripcion valida</div>
             </div>
@@ -118,11 +126,12 @@
                 type="text"
                 class="form-control"
                 id="imagenUrl"
-                placeholder="imagen"
+                placeholder="Url de la imagen"
+                required
               />
             </div>
-            <div class="invalid-feedback">Campo obligatorio</div>
-            <button type="submit" class="btn btn-primary my-3">Agregar</button>
+            <div class="invalid-feedback">Ingrese una Url valida</div>
+            <button type="submit" class="btn btn-warning my-3">Agregar</button>
             <div
               class="alert alert-danger mt-4 d-none"
               role="alert"
@@ -136,28 +145,30 @@
           </form>
         </section>
       </section>
-      <hr />
-      <section class="container">
-        <button class="btn btn-primary" id="btnAgregarAuto">Nuevo Auto</button>
-        <article class="table-responsive">
-          <table class="table m-10">
-            <thead>
-              <tr>
-                <th scope="col">Marca</th>
-                <th scope="col">Modelo</th>
-                <th scope="col">Código</th>
-                <th scope="col">Descripción</th>
-                <th scope="col">Imagen</th>
-                <th scope="col">Acciones</th>
-              </tr>
-            </thead>
-            <tbody id="tablaAuto"></tbody>
-          </table>
-        </article>
+      <section class="bg-dark">
+        <section class="container">
+          <button class="btn btn-warning mb-5 mt-4" id="btnAgregarAuto">Nuevo Auto</button>
+          <article class="table-responsive">
+            <table class="table table-dark border border-white">
+              <thead>
+                <tr>
+                  <th scope="col">Marca</th>
+                  <th scope="col">Modelo</th>
+                  <th scope="col">Código</th>
+                  <th scope="col">Descripción</th>
+                  <th scope="col">Imagen</th>
+                  <th scope="col">Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="tablaAuto"></tbody>
+            </table>
+          </article>
+        </section>
       </section>
     </main>
 
     <footer class="bg-dark text-secondary py-3 textCenter">
+      <hr class="text-white py-1">
       <section class="container mt-3">
         <article class="row justify-content-center">
           <div class="col-sm-12 col-md-4 col-footer">
