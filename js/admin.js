@@ -41,21 +41,7 @@ function guardarAuto(e) {
   e.preventDefault();
   // se verifica que pase las validaciones de los imputs
   if (validacionFormulario()) {
-<<<<<<< HEAD
-    // se pregunta el estado de variable editarAuto
-    // aun se desconoc el nombre correcto de la funcion
-=======
-<<<<<<< HEAD
-    
-    if (editarAuto === false) {
-      // crear el producto
-      agregarAuto();
-    } else {
-      // modificar el auto
-       actualizarAuto();
-=======
   
->>>>>>> 7b2d846272d64ffc33e616d9bd81a31f5ab6c1a2
     if (editarAuto === false) {
       // crear el producto
      
@@ -65,7 +51,6 @@ function guardarAuto(e) {
      
      
       actualizarAuto();
->>>>>>> limpiezacodigo
     }
   } else {
     // no debe realizar nada
@@ -88,11 +73,7 @@ function agregarAuto() {
   
   //guardar datos en el localStorage
   localStorage.setItem("listaArregloAutos", JSON.stringify(arregloAutos));
-<<<<<<< HEAD
- 
-=======
   
->>>>>>> limpiezacodigo
   limpiarFormulario();
   
   crearFilasTabla(autoNuevo);
@@ -125,11 +106,7 @@ function cargarInicial() {
 
 function crearFilasTabla(itemAuto) {
   let tabla = document.querySelector("#tablaAuto");
-<<<<<<< HEAD
-  
-=======
  
->>>>>>> limpiezacodigo
   tabla.innerHTML += `<tr>
          <th scope="row">${itemAuto.marca}</th>
          <td>${itemAuto.modelo}</td>
@@ -143,18 +120,12 @@ function crearFilasTabla(itemAuto) {
     </tr>`;
 };
 window.prepararEdicion = (codigoAuto) => {
-<<<<<<< HEAD
-=======
   
->>>>>>> limpiezacodigo
   // buscar el objeto
   let autoBuscado = arregloAutos.find((itemAuto) => {
     return itemAuto.codigo == codigoAuto;
   });
-<<<<<<< HEAD
-=======
  
->>>>>>> limpiezacodigo
   // mostrarlo en el formulario
   marca.value = autoBuscado.marca;
   modelo.value = autoBuscado.modelo;
@@ -170,11 +141,7 @@ function actualizarAuto() {
   let posicionAuto = arregloAutos.findIndex((itemAuto) => {
     return itemAuto.codigo == codigo.value;
   });
-<<<<<<< HEAD
- 
-=======
   
->>>>>>> limpiezacodigo
   // modificar los datos de esa posicion del arreglo
   arregloAutos[posicionAuto].marca = marca.value;
   arregloAutos[posicionAuto].modelo = modelo.value;
@@ -187,11 +154,7 @@ function actualizarAuto() {
   arregloAutos.forEach((itemAuto) => {
     crearFilasTabla(itemAuto);
   });
-<<<<<<< HEAD
-  
-=======
  
->>>>>>> limpiezacodigo
   limpiarFormulario();
   
   Swal.fire(
