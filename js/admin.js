@@ -5,7 +5,8 @@ import {
   validacionFormulario,
   validacionUrlImagen,
 } from "./validaciones.js";
-// se agregan variables
+
+// se agregan variales
 let marca = document.querySelector("#marca");
 let modelo = document.querySelector("#modelo");
 let codigo = document.querySelector("#codigo");
@@ -56,6 +57,7 @@ function guardarAuto(e) {
     // no debe realizar nada
     
   }
+
 };
 
 
@@ -78,7 +80,7 @@ function agregarAuto() {
   
   crearFilasTabla(autoNuevo);
   // mostar mensaje al usuario, indicando que se agregó correcctamente
-  Swal.fire("Bien hecho", "Has apretado el boton correcto", "success"
+  Swal.fire("Auto cargado!", "El auto fue cargado con exito", "success"
   );
 };
 
@@ -114,7 +116,7 @@ function crearFilasTabla(itemAuto) {
          <td>${itemAuto.descripcion}</td>
           <td>${itemAuto.imagenUrl}</td>
           <td>
-           <button class="btn btn-warning" onclick="prepararEdicion('${itemAuto.codigo}')">Editar</button>
+           <button class="btn btn-secondary mb-2" onclick="prepararEdicion('${itemAuto.codigo}')">Editar</button>
             <button class="btn btn-danger" onclick="eliminarAutos('${itemAuto.codigo}')" >Borrar</button>
           </td>     
     </tr>`;
@@ -158,8 +160,8 @@ function actualizarAuto() {
   limpiarFormulario();
   
   Swal.fire(
-    "Producto modificado",
-    "Su producto ha sido correctamente modificado",
+    "Usted modifico el auto cargado",
+    "El auto fue modificado y cargado con exito",
     "success"
   );
 }
@@ -172,13 +174,13 @@ function borrarFilasAutos() {
 
 window.eliminarAutos = (codigo) => {
   Swal.fire({
-    title: "¿Esta seguro que desea eliminar este producto?",
-    text: "Una vez eliminado el producto no se puede volver a recuperar",
+    title: "¿Esta seguro que desea eliminar el auto?",
+    text: "Una vez eliminado no se puede volver a recuperar",
     icon: "warning",
     showCancelButton: true,
-    confirmButtonColor: "#3085d6",
-    cancelButtonColor: "#d33",
-    confirmButtonText: "Borrar producto",
+    confirmButtonColor: "#000",
+    cancelButtonColor: "#dc3545",
+    confirmButtonText: "Borrar auto",
     cancelButtonText: "Cancelar",
   }).then((result) => {
     if (result.isConfirmed) {
@@ -196,8 +198,8 @@ window.eliminarAutos = (codigo) => {
         crearFilasTabla(itemAutos);
       });
       Swal.fire(
-        "Producto eliminado",
-        "El producto se elimino correctamente",
+        "El auto fue eliminado",
+        "Se elimino correctamente el auto",
         "success"
       );
     }
