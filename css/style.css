@@ -143,10 +143,6 @@ h1,h2,h3,h4,h5{
     .logoNav{
         width: 32%;
     }
-    .posicionError{
-        position: relative;
-        top: 150px;
-    }
     .posicionLogin{
         padding: 60px 0px;
     }
@@ -179,10 +175,7 @@ h1,h2,h3,h4,h5{
     .logoNav{
         width: 60%;
     }
-    .posicionError{
-        position: relative;
-        top: 250px;
-    }
+
     .posicionLogin{
         padding: 100px 0px;
     }
@@ -198,4 +191,5 @@ h1,h2,h3,h4,h5{
     #altoCard{
         height: 490px;
     }
+
 }
