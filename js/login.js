@@ -1,5 +1,3 @@
-
-
 let email = document.getElementById('email');
 let contrasena = document.getElementById('contrasena');
 let btnIngresar = document.getElementById('ingresar');
@@ -44,8 +42,5 @@ function validacionEmail (input){
     }else{
     // no deberia hacer nada
     console.log("no debería hacer nada")
-    
-    
-    }
-    }; 
-
+   }
+  };
