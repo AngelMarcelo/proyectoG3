@@ -3,7 +3,6 @@ import {
   validacionTexto,
   validacionCodigo,
   validacionFormulario,
-  validacionUrlImagen,
 } from "./validaciones.js";
 
 // se agregan variales
@@ -11,7 +10,6 @@ let marca = document.querySelector("#marca");
 let modelo = document.querySelector("#modelo");
 let codigo = document.querySelector("#codigo");
 let descripcion = document.querySelector("#descripcion");
-let imagenUrl = document.querySelector("#imagenUrl");
 let formulario = document.querySelector("#formulario");
 let arregloAutos = [];
 let editarAuto = false;
@@ -31,9 +29,7 @@ codigo.addEventListener('blur', () => {
 descripcion.addEventListener('blur', () => {
   validacionTexto(descripcion);
 })
-imagenUrl.addEventListener('blur', () => {
-  validacionUrlImagen(imagenUrl);
-})
+
 formulario.addEventListener("submit", guardarAuto);
 btnAgregarAuto.addEventListener("click", limpiarFormulario);
 
@@ -68,7 +64,6 @@ function agregarAuto() {
     modelo.value,
     codigo.value,
     descripcion.value,
-    imagenUrl.value
   );
   //agregar datos del auto al arreglo
   arregloAutos.push(autoNuevo);
@@ -90,8 +85,7 @@ function limpiarFormulario() {
   modelo.className = "form-control";
   codigo.className = "form-control";
   descripcion.className = "form-control";
-  imagenUrl.className = "form-control";
- 
+  
   editarAuto = false;
 };
 
@@ -114,10 +108,9 @@ function crearFilasTabla(itemAuto) {
          <td>${itemAuto.modelo}</td>
          <td>${itemAuto.codigo}</td>
          <td>${itemAuto.descripcion}</td>
-          <td>${itemAuto.imagenUrl}</td>
-          <td>
+        <td>
            <button class="btn btn-secondary mb-2" onclick="prepararEdicion('${itemAuto.codigo}')">Editar</button>
-            <button class="btn btn-danger" onclick="eliminarAutos('${itemAuto.codigo}')" >Borrar</button>
+            <button class="btn btn-danger mb-2" onclick="eliminarAutos('${itemAuto.codigo}')" >Borrar</button>
           </td>     
     </tr>`;
 };
@@ -133,7 +126,7 @@ window.prepararEdicion = (codigoAuto) => {
   modelo.value = autoBuscado.modelo;
   codigo.value = autoBuscado.codigo;
   descripcion.value = autoBuscado.descripcion;
-  imagenUrl.value = autoBuscado.imagenUrl;
+  // imagenUrl.value = autoBuscado.imagenUrl;
   // cambio el valor de la variable productoExistente
   editarAuto = true;
 };
@@ -148,7 +141,6 @@ function actualizarAuto() {
   arregloAutos[posicionAuto].marca = marca.value;
   arregloAutos[posicionAuto].modelo = modelo.value;
   arregloAutos[posicionAuto].descripcion = descripcion.value;
-  arregloAutos[posicionAuto].imagenUrl = imagenUrl.value;
   // modificar el localstorage
   localStorage.setItem("listaArregloAutos", JSON.stringify(arregloAutos));
   // volver a dibujar la tabla

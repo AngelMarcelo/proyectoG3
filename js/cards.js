@@ -12,21 +12,15 @@ function cargarInicial() {
   }
 }
 
+
+
 function crearColumna(itemAuto) {
   let cardAutos = document.querySelector("#cardAutos");
-  cardAutos.innerHTML += `<div class="col-sm-12 col-md-6 col-lg-3 mb-3">
-    <div class="card marginTel" id='altoCard'>
-        <div>
-        <img src="${itemAuto.imagenUrl}" class="card-img-top altoImagen" alt="${itemAuto.marca}">
-        </div>
-        <div class="card-body">
-          <h3 class="card-title text-center">${itemAuto.marca}</h3>
-          <h5 class="card-title">${itemAuto.modelo}</h5>
-          <p class="card-text">${itemAuto.descripcion}</p>
-          <div class='text-end me-3 mt-auto'>
-          <button class='btn btn-danger ' type='button'><a class="text-decoration-none text-white" href="error404.html">Ver mas</a></button>
-          </div>
-        </div>
-      </div>
-    </div>`;
-}
+  cardAutos.innerHTML += `<div class="card" style="width: 18rem;">
+  
+  <div class="card-body">
+    <h5 class="card-title">${itemAuto.modelo}</h5>
+    <p class="card-text">${itemAuto.descripcion}</p>
+    <a href="#" class="btn btn-primary">Ver Mas</a>
+  </div>
+</div>`}

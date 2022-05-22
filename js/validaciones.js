@@ -19,25 +19,14 @@ export function validacionCodigo(input) {
   }
 }
 
-export function validacionUrlImagen(input) {
-  let imagenUrl = /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/;
-  
-  if (input.value.trim() != '' && imagenUrl.test(input.value.trim())) {
-    input.className = "form-control is-valid";
-    return true;
-  } else {
-    input.className = "form-control is-invalid";
-    return false;
-  }
-}
+
 
 export function validacionFormulario() {
   if (
     validacionTexto(marca) &&
     validacionTexto(modelo) &&
     validacionCodigo(codigo) &&
-    validacionTexto(descripcion) &&
-    validacionUrlImagen(imagenUrl)
+    validacionTexto(descripcion)
   ) {
     alerta.className = 'alert alert-danger mt-4 d-none';
     return true;
